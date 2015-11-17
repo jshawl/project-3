@@ -1,6 +1,6 @@
 <%= form_for :question, url: questions_path do |f| %>
 <%= link_to 'New Question', new_question_path %>
-<h3><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h3>
+<%= link_to 'Question', questions_path %>
 
 <% if @question.errors.any? %>
     <div id="error_explanation">
@@ -24,6 +24,10 @@
   <%= f.label :question %>
   <%= f.text_field :question %>
 </p>
+
+<p>
+  <%= f.label :answer %>
+  <%= f.text_field :answer %>
 
 <p>
   <%= f.submit "illuminate" %>
