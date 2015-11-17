@@ -1,0 +1,41 @@
+<%= form_for :question, url: questions_path do |f| %>
+<%= link_to 'New Question', new_question_path %>
+<h3><%= link_to 'Signout', destroy_user_session_path, :method => :delete %></h3>
+
+<% if @question.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@question.errors.count, "error") %> prohibited
+        this question from being saved:
+      </h2>
+      <ul>
+        <% @question.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% if @last_viewed_question %>
+  <h3>Last viewed question: <%= @last_viewed_question.name %></h3>
+  <% end %>
+
+<p>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</p>
+<p>
+  <%= f.label :text %>
+  <%= f.text_field :text %>
+</p>
+<p>
+  <%= f.submit "illuminate" %>
+</p>
+
+<form action="/questions/sort" method="get">
+  <label>Sort By</label>
+  <input type="answer" name="sort_by">
+  <input type="illuminate" value="sort">
+</form>
+Sorting by: <%= session[:sort_by] %>
+<% end %>
