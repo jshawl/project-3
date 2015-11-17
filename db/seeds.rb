@@ -5,7 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
+Question.destroy_all
+Answer.destroy_all
 
 user = User.create(email: "text@text.com", password: "thisisapassword")
 question = Question.create(question: "How are you feeling?")

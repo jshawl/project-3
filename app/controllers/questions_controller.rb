@@ -1,20 +1,10 @@
 class QuestionsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_question, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
-
-  def index
-    authenticate_user!
-    @last_viewed_question = Question.find(session[:last_viewed_question_id])
-    @questions = Question.all.order(session[:sort_by])
-    if current_user
-      @questions = current_user.question
-    else
-      @questions = Question.all
-    end
-  end
 
   def set_question
   end
+
 
   def sort
     session[:sort_by] = params[:sort_by]
@@ -26,20 +16,54 @@ class QuestionsController < ApplicationController
     redirect_to questions_path
   end
 
+  def new
+    @question = Question.new
+  end
+
+  def edit
+    @question = Question.find(params[:id])
+  end
+
+  def index
+    authenticate_user!
+    # @last_viewed_question = Question.find(session[:last_viewed_question_id])
+    @questions = Question.all.order(session[:sort_by])
+      if current_user
+        @questions = current_user.questions
+      else
+        @questions = Question.all
+      end
+    end
 
   def show
     @questions = Question.find(params[:id])
-    session[:last_viewed_question_id] = @question.id
-  end
-
-  def new
+    # session[:last_viewed_question_id] = @question.id
+    @answer = @question.answers.build
   end
 
   def create
-    current_user.question.create(question_params)
-    @questions.save
-    redirect_to @article
+    @question = current_user.questions.create(question_params)
+    if @question.save
+      redirect_to @question
+    else
+      render 'new'
+    end
   end
+
+  def update
+    @question = Question.find(params[:id])
+    if @question.update(question_params)
+      redirect_to @question
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+  @question = Question.find(params[:id])
+  @question.destroy
+  redirect_to @question
+end
 
   private
     def question_params
