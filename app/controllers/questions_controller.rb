@@ -16,6 +16,12 @@ class QuestionsController < ApplicationController
     redirect_to questions_path
   end
 
+  def show
+    @question = Question.find(params[:id])
+    # session[:last_viewed_question_id] = @question.id
+    # @response = @question.response.build
+  end
+
   def new
     @question = Question.new
   end
@@ -34,12 +40,6 @@ class QuestionsController < ApplicationController
         @questions = Question.all
       end
     end
-
-  def show
-    @question = Question.find(params[:id])
-    # session[:last_viewed_question_id] = @question.id
-    @answer = @question.answers.build
-  end
 
   def create
     @question = current_user.questions.build(question_params)
@@ -67,6 +67,6 @@ end
 
   private
     def question_params
-      params.require(:question).permit(:question, :answer)
+      params.require(:question).permit(:body)
     end
 end

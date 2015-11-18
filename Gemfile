@@ -33,6 +33,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 gem 'jquery-minicolors-rails'
 
+gem 'simple_form'
+
 gem 'devise'
 
 group :development, :test do

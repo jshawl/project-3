@@ -11,16 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151118170422) do
+ActiveRecord::Schema.define(version: 20151118230814) do
 
 # Could not dump table "answers" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
 
   create_table "questions", force: :cascade do |t|
-    t.string   "question"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "body"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.integer  "user_id"
+    t.integer  "response_id"
+    t.string   "color"
   end
 
   create_table "responses", force: :cascade do |t|

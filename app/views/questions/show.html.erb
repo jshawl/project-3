@@ -1,23 +1,12 @@
 <p>
   <strong>Question:</strong>
-  <%= @question.question %>
+  <%= @question.body%>
 </p>
 
-<p>
-  <strong>Color:</strong>
-  <%= @question.answer %>
+<p><strong>Color:</strong>
+  <%= @question.color %>
 </p>
 
-<h2>Answer</h2>
-<% @question.answers.each do |answer| %>
-  <p>
-    <strong>Color:</strong>
-    <%= answer.value %>
-  </p>
-
-
-
-<% end %>
 <%= render partial: "answers/form" %>
 
 <%= link_to 'Back', questions_path %>

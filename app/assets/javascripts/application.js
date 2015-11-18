@@ -11,6 +11,8 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.minicolors
+//= require jquery.minicolors.simple_form
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
@@ -19,4 +21,27 @@ $(document).ready(function(){
   $('button').on('click',function(){
     alert('I was clicked')
   })
+
+  $.minicolors = {
+      defaults: {
+          animationSpeed: 50,
+          animationEasing: 'swing',
+          change: null,
+          changeDelay: 0,
+          control: 'hue',
+          dataUris: true,
+          defaultValue: '',
+          format: 'hex',
+          hide: null,
+          hideSpeed: 100,
+          inline: false,
+          keywords: '',
+          letterCase: 'lowercase',
+          opacity: false,
+          position: 'bottom left',
+          show: null,
+          showSpeed: 100,
+          theme: 'default'
+      }
+  };
 })

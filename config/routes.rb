@@ -2,12 +2,13 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :questions do
-    resources :answers
+    resources :responses
   end
 
   get 'welcome/index'
   get '/questions/sort', to: 'questions#sort'
   get '/questions/delete_session', to: 'questions#delete_session'
+  get 'response/index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
