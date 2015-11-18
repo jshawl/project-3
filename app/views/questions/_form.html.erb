@@ -1,6 +1,6 @@
 <%= form_for :question, url: questions_path do |f| %>
-<%= link_to 'New Question', new_question_path %>
-<%= link_to 'Question', questions_path %>
+<%= link_to 'Next Question', new_question_path %>
+
 
 <% if @question.errors.any? %>
     <div id="error_explanation">
@@ -26,17 +26,11 @@
 </p>
 
 <p>
-  <%= f.label :answer %>
+  <%= f.label :color %>
   <%= f.text_field :answer %>
 
 <p>
   <%= f.submit "illuminate" %>
 </p>
 
-<form action="/questions/sort" method="get">
-  <label>Sort By</label>
-  <input type="answer" name="sort_by">
-  <input type="illuminate" value="sort">
-</form>
-Sorting by: <%= session[:sort_by] %>
 <% end %>

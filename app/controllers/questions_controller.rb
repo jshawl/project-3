@@ -3,8 +3,8 @@ class QuestionsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def set_question
+      @question = Question.new
   end
-
 
   def sort
     session[:sort_by] = params[:sort_by]

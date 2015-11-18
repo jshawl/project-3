@@ -5,7 +5,7 @@
 
 <p>
   <strong>Color:</strong>
-  <%= @question.value %>
+  <%= @question.answer %>
 </p>
 
 <h2>Answer</h2>
@@ -14,18 +14,10 @@
     <strong>Value:</strong>
     <%= answer.value %>
   </p>
-<% end %>
 
-<h2>question:</h2>
-<%= form_for([@ar, @question.answers.build]) do |f| %>
-  <p>
-    <%= f.label :value %><br>
-    <%= f.text_field :value %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+
+<% end %>
+<%= render partial: "answers/form" %>
+
+<%= link_to 'Back', questions_path %>

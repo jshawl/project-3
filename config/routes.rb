@@ -5,9 +5,9 @@ Rails.application.routes.draw do
     resources :answers
   end
 
+  get 'welcome/index'
   get '/questions/sort', to: 'questions#sort'
   get '/questions/delete_session', to: 'questions#delete_session'
-  get 'welcome/index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
