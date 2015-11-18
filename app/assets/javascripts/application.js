@@ -15,4 +15,8 @@
 //= require turbolinks
 //= require_tree .
 
-require chartkick.js
+$(document).ready(function(){
+  $('button').on('click',function(){
+    alert('I was clicked')
+  })
+})

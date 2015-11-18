@@ -9,6 +9,19 @@ class AnswersController < ApplicationController
       redirect_to question_path(@question)
     end
 
+  def edit
+    @answer = Answer.find(params[:id])
+  end
+
+  # def update
+  #   @question = Question.find(params[:id])
+  #   if @question.update(question_params)
+  #     redirect_to @question
+  #   else
+  #     render 'edit'
+  #   end
+  # end
+
   def destroy
     @question = Question.find(params[:quetion_id])
     @answer = @question.answers.find(params[:id])

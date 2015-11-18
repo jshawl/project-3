@@ -8,13 +8,16 @@
 
 <h1>What color is...</h1>
 
-<%= link_to 'New question', new_question_path %>
+<div class="newQ">
+  <%= link_to 'New question', new_question_path %>
+</div>
 
   <tr>
     <th>Question</th>
     <th>Answer</th>
     <th colspan="2"></th>
   </tr>
+<div class="QandA">
 
   <% @questions.each do |question| %>
     <tr>
@@ -25,4 +28,5 @@
               method: :delete,
               data: { confirm: 'Feeling anti-chromatic?' } %>
     </tr>
+</div>
   <% end %>

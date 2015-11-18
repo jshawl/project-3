@@ -36,13 +36,13 @@ class QuestionsController < ApplicationController
     end
 
   def show
-    @questions = Question.find(params[:id])
+    @question = Question.find(params[:id])
     # session[:last_viewed_question_id] = @question.id
     @answer = @question.answers.build
   end
 
   def create
-    @question = current_user.questions.create(question_params)
+    @question = current_user.questions.build(question_params)
     if @question.save
       redirect_to @question
     else
@@ -67,6 +67,6 @@ end
 
   private
     def question_params
-      params.require(:question).permit(:question, :color)
+      params.require(:question).permit(:question, :answer)
     end
 end
