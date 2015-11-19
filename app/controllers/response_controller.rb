@@ -1,6 +1,4 @@
 class ResponseController < ApplicationController
-  before_action :set_question, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def set_respone
     @response = Response.new

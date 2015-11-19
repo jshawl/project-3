@@ -8,26 +8,12 @@ class QuestionsController < ApplicationController
 
   def sort
     session[:sort_by] = params[:sort_by]
-    redirect_to posts_question
+    redirect_to questions_path
   end
 
   def delete_session
     session.delete(:last_viewed_question)
     redirect_to questions_path
-  end
-
-  def show
-    @question = Question.find(params[:id])
-    # session[:last_viewed_question_id] = @question.id
-    # @response = @question.response.build
-  end
-
-  def new
-    @question = Question.new
-  end
-
-  def edit
-    @question = Question.find(params[:id])
   end
 
   def index
@@ -41,6 +27,14 @@ class QuestionsController < ApplicationController
       end
     end
 
+  def new
+    @question = Question.new
+  end
+
+  def edit
+    @question = Question.find(params[:id])
+  end
+
   def create
     @question = current_user.questions.build(question_params)
     if @question.save
@@ -48,6 +42,13 @@ class QuestionsController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def show
+    @question = Question.find(params[:id])
+    # session[:last_viewed_question_id] = @question.id
+    # @response = @question.response.build
+    @color = @question.responses.build
   end
 
   def update
@@ -67,6 +68,6 @@ end
 
   private
     def question_params
-      params.require(:question).permit(:body)
+      params.require(:question).permit(:body, :color)
     end
 end
