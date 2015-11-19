@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Question.destroy_all
 Response.destroy_all
+User.destroy_all
 
 question = Question.create([
   {body: 'How are you feeling?', color: '#000'},

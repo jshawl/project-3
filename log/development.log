@@ -29858,3 +29858,509 @@ Started GET "/assets/application.self-3c140f4476ee03ef1535499f67b7bca7a4c67de89e
 
 
 Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-19 15:38:17 -0500
+
+
+Started GET "/questions" for ::1 at 2015-11-19 17:07:09 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (6.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+  [1m[35mUser Load (6.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (1.3ms)[0m  [1mSELECT "questions".* FROM "questions" INNER JOIN "responses" ON "questions"."response_id" = "responses"."id" WHERE "responses"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 549ms (Views: 448.0ms | ActiveRecord: 19.9ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:07:11 -0500
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:07:11 -0500
+
+
+Started GET "/assets/response.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:07:11 -0500
+
+
+Started GET "/assets/application.self-4a034e74568b7ea42e2e51af9cc71866016663524ef0f6e2d42ada4dd6eaa9ea.css?body=1" for ::1 at 2015-11-19 17:07:11 -0500
+
+
+Started GET "/assets/jquery.minicolors.self-8e1ea44d0430e0852efabad3b5415c22d0632873d6aea5b592813c2ddefbdeb8.css?body=1" for ::1 at 2015-11-19 17:07:11 -0500
+
+
+Started GET "/assets/welcome.self-ebb8fbcffd3bb0bb3f72a6bb96ac946334bfde6d1fca5b6a2ed1e4acd1fab725.css?body=1" for ::1 at 2015-11-19 17:07:12 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-19 17:07:12 -0500
+
+
+Started GET "/assets/jquery.minicolors.self-6cb9cff1d57d1e9290adc489fa845fbb1b3db8e0d11d85a1215b48b1cbcb08ba.js?body=1" for ::1 at 2015-11-19 17:07:12 -0500
+
+
+Started GET "/assets/jquery.minicolors.simple_form.self-ada55ede2aa529d142b829a290d258379e211154551f67436313b55ea7d7c87b.js?body=1" for ::1 at 2015-11-19 17:07:12 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-19 17:07:12 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-19 17:07:12 -0500
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-19 17:07:12 -0500
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-19 17:07:12 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-19 17:07:12 -0500
+
+
+Started GET "/assets/response.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-19 17:07:12 -0500
+
+
+Started GET "/assets/application.self-3c140f4476ee03ef1535499f67b7bca7a4c67de89e277311cf566925b12f35d0.js?body=1" for ::1 at 2015-11-19 17:07:12 -0500
+
+
+Started GET "/questions" for ::1 at 2015-11-19 17:07:15 -0500
+Processing by QuestionsController#index as HTML
+  [1m[35mUser Load (1.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (1.5ms)[0m  [1mSELECT "questions".* FROM "questions" INNER JOIN "responses" ON "questions"."response_id" = "responses"."id" WHERE "responses"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 213ms (Views: 166.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:07:16 -0500
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:07:17 -0500
+
+
+Started GET "/assets/welcome.self-ebb8fbcffd3bb0bb3f72a6bb96ac946334bfde6d1fca5b6a2ed1e4acd1fab725.css?body=1" for ::1 at 2015-11-19 17:07:17 -0500
+
+
+Started GET "/assets/response.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:07:17 -0500
+
+
+Started GET "/assets/application.self-4a034e74568b7ea42e2e51af9cc71866016663524ef0f6e2d42ada4dd6eaa9ea.css?body=1" for ::1 at 2015-11-19 17:07:17 -0500
+
+
+Started GET "/assets/jquery.minicolors.self-8e1ea44d0430e0852efabad3b5415c22d0632873d6aea5b592813c2ddefbdeb8.css?body=1" for ::1 at 2015-11-19 17:07:17 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-19 17:07:17 -0500
+
+
+Started GET "/assets/jquery.minicolors.self-6cb9cff1d57d1e9290adc489fa845fbb1b3db8e0d11d85a1215b48b1cbcb08ba.js?body=1" for ::1 at 2015-11-19 17:07:17 -0500
+
+
+Started GET "/assets/jquery.minicolors.simple_form.self-ada55ede2aa529d142b829a290d258379e211154551f67436313b55ea7d7c87b.js?body=1" for ::1 at 2015-11-19 17:07:17 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-19 17:07:17 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-19 17:07:17 -0500
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-19 17:07:17 -0500
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-19 17:07:17 -0500
+
+
+Started GET "/assets/response.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-19 17:07:17 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-19 17:07:17 -0500
+
+
+Started GET "/assets/application.self-3c140f4476ee03ef1535499f67b7bca7a4c67de89e277311cf566925b12f35d0.js?body=1" for ::1 at 2015-11-19 17:07:17 -0500
+  [1m[36m (27.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (3.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20151116201243)
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36m (14.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36m (1.2ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (2.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151116201243"]]
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateQuestions (20151116205400)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "questions" ("id" serial primary key, "question" character varying, "answer" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151116205400"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+Migrating to AddUserIdToQuestions (20151117045933)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.9ms)[0m  [1mALTER TABLE "questions" ADD "user_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151117045933"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateAnswers (20151117051624)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (6.9ms)[0m  [1mCREATE TABLE "answers" ("id" serial primary key, "value" character varying, "question_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE  INDEX  "index_answers_on_question_id" ON "answers"  ("question_id")
+  [1m[36m (12.7ms)[0m  [1mALTER TABLE "answers" ADD CONSTRAINT "fk_rails_3d5ed4418f"
+FOREIGN KEY ("question_id")
+  REFERENCES "questions" ("id")
+[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151117051624"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddUserIdToAnswers (20151117052007)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "answers" ADD "user_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151117052007"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddUserToAnswers (20151117143619)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.1ms)[0m  [1mALTER TABLE "answers" ADD "user" user[0m
+PG::SyntaxError: ERROR:  syntax error at or near "user"
+LINE 1: ALTER TABLE "answers" ADD "user" user
+                                         ^
+: ALTER TABLE "answers" ADD "user" user
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveAnswerFromQuestions (20151118162604)
+  [1m[35m (1.4ms)[0m  BEGIN
+  [1m[36m (14.4ms)[0m  [1mALTER TABLE "questions" DROP "answer"[0m
+  [1m[35mSQL (3.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151118162604"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateResponses (20151118170422)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[36m (19.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (5.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20151116201243)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (15.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36m (1.6ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151116201243"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateQuestions (20151116205400)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (6.6ms)[0m  [1mCREATE TABLE "questions" ("id" serial primary key, "question" character varying, "answer" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151116205400"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+Migrating to AddUserIdToQuestions (20151117045933)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (1.7ms)[0m  [1mALTER TABLE "questions" ADD "user_id" integer[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151117045933"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to RemoveAnswerFromQuestions (20151118162604)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "questions" DROP "answer"[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151118162604"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateResponses (20151118170422)
+  [1m[35m (1.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (4.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20151116201243)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.2ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36m (1.4ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151116201243"]]
+  [1m[36m (3.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateQuestions (20151116205400)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (7.1ms)[0m  [1mCREATE TABLE "questions" ("id" serial primary key, "question" character varying, "answer" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151116205400"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddUserIdToQuestions (20151117045933)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "questions" ADD "user_id" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151117045933"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateResponses (20151118170422)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (6.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20151116201243)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (9.5ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36m (3.2ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151116201243"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateQuestions (20151116205400)
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36m (7.9ms)[0m  [1mCREATE TABLE "questions" ("id" serial primary key, "question" character varying, "answer" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151116205400"]]
+  [1m[36m (3.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddUserIdToQuestions (20151117045933)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "questions" ADD "user_id" integer[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151117045933"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+Migrating to CreateResponses (20151118170422)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (9.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DeviseCreateUsers (20151116201243)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (10.6ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")
+  [1m[36m (4.0ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151116201243"]]
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+Migrating to CreateQuestions (20151116205400)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (11.3ms)[0m  [1mCREATE TABLE "questions" ("id" serial primary key, "question" character varying, "answer" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151116205400"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Migrating to AddUserIdToQuestions (20151117045933)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "questions" ADD "user_id" integer[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151117045933"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateResponses (20151118170422)
+  [1m[36m (0.3ms)[0m  [1mDROP DATABASE IF EXISTS "project_development"[0m
+  [1m[35m (0.2ms)[0m  DROP DATABASE IF EXISTS "project_test"
+  [1m[36m (413.5ms)[0m  [1mCREATE DATABASE "project_development" ENCODING = 'utf8'[0m
+  [1m[35m (258.1ms)[0m  CREATE DATABASE "project_test" ENCODING = 'utf8'
+  [1m[36mSQL (1.8ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (14.8ms)[0m  CREATE TABLE "questions" ("id" serial primary key, "body" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer, "response_id" integer, "color" character varying) 
+  [1m[36m (6.3ms)[0m  [1mCREATE TABLE "responses" ("id" serial primary key, "question_id" integer, "user_id" integer, "color" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE  INDEX  "index_responses_on_question_id" ON "responses" USING btree ("question_id")
+  [1m[36m (1.5ms)[0m  [1mCREATE  INDEX  "index_responses_on_user_id" ON "responses" USING btree ("user_id")[0m
+  [1m[35m (9.2ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (1.8ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (1.9ms)[0m  CREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.7ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (2.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151118230814')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151116201243')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151116205400')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151117045933')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151118170422')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151118175914')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151118193355')
+  [1m[36mSQL (0.9ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (28.7ms)[0m  CREATE TABLE "questions" ("id" serial primary key, "body" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "user_id" integer, "response_id" integer, "color" character varying) 
+  [1m[36m (11.3ms)[0m  [1mCREATE TABLE "responses" ("id" serial primary key, "question_id" integer, "user_id" integer, "color" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE  INDEX  "index_responses_on_question_id" ON "responses" USING btree ("question_id")
+  [1m[36m (1.7ms)[0m  [1mCREATE  INDEX  "index_responses_on_user_id" ON "responses" USING btree ("user_id")[0m
+  [1m[35m (11.1ms)[0m  CREATE TABLE "users" ("id" serial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying, "last_sign_in_ip" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.0ms)[0m  [1mCREATE UNIQUE INDEX  "index_users_on_email" ON "users" USING btree ("email")[0m
+  [1m[35m (2.1ms)[0m  CREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users" USING btree ("reset_password_token")
+  [1m[36m (8.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.7ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.8ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151118230814')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151116201243')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151116205400')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151117045933')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151118170422')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151118175914')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151118193355')
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mQuestion Load (0.8ms)[0m  SELECT "questions".* FROM "questions"
+  [1m[36mResponse Load (1.1ms)[0m  [1mSELECT "responses".* FROM "responses"[0m
+  [1m[35mUser Load (2.2ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.5ms)[0m  INSERT INTO "questions" ("body", "color", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["body", "How are you feeling?"], ["color", "#000"], ["created_at", "2015-11-19 22:45:07.749107"], ["updated_at", "2015-11-19 22:45:07.749107"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "questions" ("body", "color", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "What is your mood?"], ["color", "#fff"], ["created_at", "2015-11-19 22:45:07.761224"], ["updated_at", "2015-11-19 22:45:07.761224"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "responses" ("color", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["color", "#000"], ["created_at", "2015-11-19 22:45:07.775287"], ["updated_at", "2015-11-19 22:45:07.775287"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "responses" ("color", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["color", "#fff"], ["created_at", "2015-11-19 22:45:07.782513"], ["updated_at", "2015-11-19 22:45:07.782513"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mQuestion Load (6.3ms)[0m  SELECT "questions".* FROM "questions"
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mResponse Load (0.6ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."question_id" = $1  [["question_id", 1]]
+  [1m[36mSQL (2.4ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mResponse Load (0.3ms)[0m  SELECT "responses".* FROM "responses" WHERE "responses"."question_id" = $1  [["question_id", 2]]
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mResponse Load (0.4ms)[0m  [1mSELECT "responses".* FROM "responses"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "responses" WHERE "responses"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "responses" WHERE "responses"."id" = $1  [["id", 2]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.7ms)[0m  INSERT INTO "questions" ("body", "color", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["body", "How are you feeling?"], ["color", "#000"], ["created_at", "2015-11-19 22:46:52.498807"], ["updated_at", "2015-11-19 22:46:52.498807"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "questions" ("body", "color", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["body", "What is your mood?"], ["color", "#fff"], ["created_at", "2015-11-19 22:46:52.504708"], ["updated_at", "2015-11-19 22:46:52.504708"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "responses" ("color", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["color", "#000"], ["created_at", "2015-11-19 22:46:52.506886"], ["updated_at", "2015-11-19 22:46:52.506886"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "responses" ("color", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["color", "#fff"], ["created_at", "2015-11-19 22:46:52.509453"], ["updated_at", "2015-11-19 22:46:52.509453"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+
+
+Started GET "/questions" for ::1 at 2015-11-19 17:47:18 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by QuestionsController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 401 Unauthorized in 45ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2015-11-19 17:47:19 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered /Users/armanihall/.rvm/gems/ruby-2.2.3/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (2.0ms)
+  Rendered /Users/armanihall/.rvm/gems/ruby-2.2.3/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (51.9ms)
+Completed 200 OK in 515ms (Views: 498.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:47:20 -0500
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:47:20 -0500
+
+
+Started GET "/assets/response.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:47:20 -0500
+
+
+Started GET "/assets/welcome.self-ebb8fbcffd3bb0bb3f72a6bb96ac946334bfde6d1fca5b6a2ed1e4acd1fab725.css?body=1" for ::1 at 2015-11-19 17:47:20 -0500
+
+
+Started GET "/assets/application.self-4a034e74568b7ea42e2e51af9cc71866016663524ef0f6e2d42ada4dd6eaa9ea.css?body=1" for ::1 at 2015-11-19 17:47:20 -0500
+
+
+Started GET "/assets/jquery.minicolors.self-8e1ea44d0430e0852efabad3b5415c22d0632873d6aea5b592813c2ddefbdeb8.css?body=1" for ::1 at 2015-11-19 17:47:20 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-19 17:47:20 -0500
+
+
+Started GET "/assets/jquery.minicolors.self-6cb9cff1d57d1e9290adc489fa845fbb1b3db8e0d11d85a1215b48b1cbcb08ba.js?body=1" for ::1 at 2015-11-19 17:47:20 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-19 17:47:20 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-19 17:47:20 -0500
+
+
+Started GET "/assets/jquery.minicolors.simple_form.self-ada55ede2aa529d142b829a290d258379e211154551f67436313b55ea7d7c87b.js?body=1" for ::1 at 2015-11-19 17:47:20 -0500
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-19 17:47:20 -0500
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-19 17:47:20 -0500
+
+
+Started GET "/assets/response.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-19 17:47:20 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-19 17:47:20 -0500
+
+
+Started GET "/assets/application.self-3c140f4476ee03ef1535499f67b7bca7a4c67de89e277311cf566925b12f35d0.js?body=1" for ::1 at 2015-11-19 17:47:20 -0500
+
+
+Started POST "/users/sign_in" for ::1 at 2015-11-19 17:47:26 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MgUQMhCgu2s+1Hwt3PXpt14RviHnl5a2vRfBQUknw+F/gIjo+Qr1JCg7vmXG47KX0QiPSCognHhQ8jHwFgtuzg==", "user"=>{"email"=>"mrbojangles226@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (12.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "mrbojangles226@gmail.com"]]
+Completed 401 Unauthorized in 47ms (ActiveRecord: 12.1ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MgUQMhCgu2s+1Hwt3PXpt14RviHnl5a2vRfBQUknw+F/gIjo+Qr1JCg7vmXG47KX0QiPSCognHhQ8jHwFgtuzg==", "user"=>{"email"=>"mrbojangles226@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered /Users/armanihall/.rvm/gems/ruby-2.2.3/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered /Users/armanihall/.rvm/gems/ruby-2.2.3/gems/devise-3.5.2/app/views/devise/sessions/new.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 318ms (Views: 195.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2015-11-19 17:47:31 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /Users/armanihall/.rvm/gems/ruby-2.2.3/gems/devise-3.5.2/app/views/devise/shared/_links.html.erb (0.8ms)
+  Rendered /Users/armanihall/.rvm/gems/ruby-2.2.3/gems/devise-3.5.2/app/views/devise/registrations/new.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 355ms (Views: 340.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2015-11-19 17:47:41 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OeXeleuJHq21cu+OfWvHc/QWKH18Sa3RyIfDFzsiIO10YEZPAiNQ4qOdLcZnfZxTew8ZFLH+px8lYjOmZA6Nwg==", "user"=>{"email"=>"mrbojangles226@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mUser Exists (1.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'mrbojangles226@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (3.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["email", "mrbojangles226@gmail.com"], ["encrypted_password", "$2a$10$aKKwlnnXx/evjZJt3HsiauaRLBfLqwJJOEzOXkNAb.UY7c1awDbYC"], ["created_at", "2015-11-19 22:47:42.156045"], ["updated_at", "2015-11-19 22:47:42.156045"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["last_sign_in_at", "2015-11-19 22:47:42.168780"], ["current_sign_in_at", "2015-11-19 22:47:42.168780"], ["last_sign_in_ip", "::1"], ["current_sign_in_ip", "::1"], ["sign_in_count", 1], ["updated_at", "2015-11-19 22:47:42.170385"], ["id", 1]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/questions
+Completed 302 Found in 232ms (ActiveRecord: 8.3ms)
+
+
+Started GET "/questions" for ::1 at 2015-11-19 17:47:42 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (1.3ms)[0m  SELECT "questions".* FROM "questions" INNER JOIN "responses" ON "questions"."response_id" = "responses"."id" WHERE "responses"."user_id" = $1  [["user_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 310ms (Views: 248.1ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/questions" for ::1 at 2015-11-19 17:47:46 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.9ms)[0m  SELECT "questions".* FROM "questions" INNER JOIN "responses" ON "questions"."response_id" = "responses"."id" WHERE "responses"."user_id" = $1  [["user_id", 1]]
+  Rendered questions/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 410ms (Views: 364.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:47:46 -0500
+
+
+Started GET "/assets/response.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:47:46 -0500
+
+
+Started GET "/assets/welcome.self-ebb8fbcffd3bb0bb3f72a6bb96ac946334bfde6d1fca5b6a2ed1e4acd1fab725.css?body=1" for ::1 at 2015-11-19 17:47:46 -0500
+
+
+Started GET "/assets/application.self-4a034e74568b7ea42e2e51af9cc71866016663524ef0f6e2d42ada4dd6eaa9ea.css?body=1" for ::1 at 2015-11-19 17:47:46 -0500
+
+
+Started GET "/assets/jquery.minicolors.self-8e1ea44d0430e0852efabad3b5415c22d0632873d6aea5b592813c2ddefbdeb8.css?body=1" for ::1 at 2015-11-19 17:47:46 -0500
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-19 17:47:46 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-19 17:47:46 -0500
+
+
+Started GET "/assets/jquery.minicolors.self-6cb9cff1d57d1e9290adc489fa845fbb1b3db8e0d11d85a1215b48b1cbcb08ba.js?body=1" for ::1 at 2015-11-19 17:47:46 -0500
+
+
+Started GET "/assets/jquery.minicolors.simple_form.self-ada55ede2aa529d142b829a290d258379e211154551f67436313b55ea7d7c87b.js?body=1" for ::1 at 2015-11-19 17:47:46 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-19 17:47:46 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-11-19 17:47:46 -0500
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-19 17:47:46 -0500
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-19 17:47:46 -0500
+
+
+Started GET "/assets/response.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-19 17:47:46 -0500
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-19 17:47:47 -0500
+
+
+Started GET "/assets/application.self-3c140f4476ee03ef1535499f67b7bca7a4c67de89e277311cf566925b12f35d0.js?body=1" for ::1 at 2015-11-19 17:47:47 -0500
+  [1m[36mQuestion Load (0.8ms)[0m  [1mSELECT "questions".* FROM "questions"[0m
