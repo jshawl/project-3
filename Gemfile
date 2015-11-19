@@ -35,6 +35,8 @@ gem 'jquery-minicolors-rails'
 
 gem 'simple_form'
 
+gem 'rails_12factor'
+
 gem 'devise'
 
 group :development, :test do
