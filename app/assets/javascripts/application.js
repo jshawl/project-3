@@ -20,7 +20,19 @@
 $(document).ready(function(){
   $('button').on('click',function(){
     alert('I was clicked')
+
+  $('#set-color').click(color)
+  function color(evt){
+    colorSelect = $('#color-field').val();
+    console.log(colorSelect);
+    console.log('color select');
+    evt.preventDefault();
+    $("div.brush").css("background", colorSelect)
+
+    $('.square').mouseover(function(){
+  $(this).css("background", colorSelect)
   })
+}
 
   $.minicolors = {
       defaults: {
@@ -44,4 +56,5 @@ $(document).ready(function(){
           theme: 'default'
       }
   };
+})
 })

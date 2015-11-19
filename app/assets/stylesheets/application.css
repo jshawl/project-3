@@ -58,7 +58,16 @@
 div{
 
 }
-
+  .color-field{
+    position: relative;
+    margin: 50 0 0 0px;
+    border-style: solid;
+    border-width: thin;
+    border-left: 50px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+  }
  /* Paragraph & Typographic */
  p {
      line-height: 28px;
@@ -73,7 +82,8 @@ div{
  /* Links */
  a {
     font-size: 20px;
-     color: #3498db;
+     color: #fff;
+     background-color: #3498DB;
      word-wrap: break-word;
 
      -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -98,6 +108,10 @@ div{
      -o-transition: color 0.1s ease-in, background 0.1s ease-in;
      transition: color 0.1s ease-in, background 0.1s ease-in;
  }
+
+table{
+  background-color: yellow;
+}
 
   hr {
      display: block;

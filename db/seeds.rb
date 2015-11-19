@@ -9,6 +9,11 @@ Question.destroy_all
 Response.destroy_all
 
 question = Question.create([
-  {body: "How are you feeling?"},
-  {body: "What is your mood?"}
+  {body: 'How are you feeling?', color: '#000'},
+  {body: 'What is your mood?', color: '#fff'}
+])
+
+response = Response.create([
+  {color: '#000'},
+  {color: '#fff'}
 ])

@@ -49,6 +49,10 @@ class QuestionsController < ApplicationController
     # session[:last_viewed_question_id] = @question.id
     # @response = @question.response.build
     @color = @question.responses.build
+    respond_to do |format|
+        format.html
+        format.css
+      end
   end
 
   def update

@@ -12,23 +12,24 @@
   <%= link_to 'New question', new_question_path %>
 </div>
 
+<table>
   <tr>
     <th>Question</th>
-    <th>Answer</th>
+    <th>Color</th>
     <th colspan="20"></th>
   </tr>
-<div class="QandA">
 
-<table>
   <% @questions.each do |question| %>
     <tr>
+      <div class="QandA">
       <td><%= question.body %></td>
+      <td><%= question.color %></td>
       <td><%= link_to 'Show', question_path(question) %></td>
       <td><%= link_to 'Edit', edit_question_path(question) %></td>
       <td><%= link_to 'BALEETED', question_path(question),
               method: :delete,
-              data: { confirm: 'Feeling anti-chromatic?' } %>
+              data: { confirm: 'Feeling anti-chromatic?' } %> </td>
+      </div>
     </tr>
-</div>
   <% end %>
 </table>
