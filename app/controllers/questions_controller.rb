@@ -22,6 +22,7 @@ class QuestionsController < ApplicationController
     @questions = Question.all.order(session[:sort_by])
       if current_user
         @questions = current_user.questions
+        @questions = Question.all
       else
         @questions = Question.all
       end
@@ -50,14 +51,15 @@ class QuestionsController < ApplicationController
     # @response = @question.response.build
     @color = @question.responses.build
     respond_to do |format|
-        format.html
-        format.css
-      end
+      format.html
+      format.css
+    end
   end
 
   def update
     @question = Question.find(params[:id])
     if @question.update(question_params)
+      @question.destroy
       redirect_to @question
     else
       render 'edit'
@@ -65,10 +67,10 @@ class QuestionsController < ApplicationController
   end
 
   def destroy
-  @question = Question.find(params[:id])
-  @question.destroy
-  redirect_to @question
-end
+    @question = Question.find(params[:id])
+    @question.destroy
+    redirect_to @question
+  end
 
   private
     def question_params

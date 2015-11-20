@@ -17,26 +17,25 @@
  */
  body {
    background-color: #f2f2f2;
-     font-family: 'Lato', sans-serif;
-     font-weight: 300;
-     font-size: 16px;
-     color: #555;
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   font-size: 16px;
+   color: #555;
 
-     -webkit-font-smoothing: antialiased;
-     -webkit-overflow-scrolling: touch;
+   -webkit-font-smoothing: antialiased;
+   -webkit-overflow-scrolling: touch;
  }
 
  /* Titles */
  h1, h2, h3, h4, h5, h6 {
-     font-family: 'Lato', sans-serif;
-     font-weight: 300;
-     color: #333;
+   font-family: 'Lato', sans-serif;
+   font-weight: 300;
+   color: #333;
  }
 
  h1 {
  	font-size: 60px;
   background-color: #fff;
-
  }
 
  h3 {
@@ -57,18 +56,23 @@
 
 div{
 }
-  td{
 
-  }
+td{
+  table-layout: auto;
+}
+
+tr{
+  table-layout: auto;
+  column-span: 50px;
+}
 
   .color-field{
     position: relative;
-    margin: 50 0 0 0px;
+    margin: 0 0 0 0px;
     border-style: solid;
     border-width: thin;
-    border-left: 50px;
-    width: 100px;
-    height: 100px;
+    width: 40px;
+    height: 40px;
     text-align: center;
   }
 
@@ -78,7 +82,6 @@ div{
      margin-bottom: 25px;
      font-size: 16px;
  }
-
 
  .centered {
      text-align: center;
@@ -115,7 +118,8 @@ div{
  }
 
 table{
-  /*background-color: yellow;*/
+  table-layout: auto;
+  column-span: all;
 }
 
   hr {
@@ -162,7 +166,6 @@ table{
  	margin: 8px;
  	color: #3498db;
  }
-
 
  /* HeaderWrap */
  #headerwrap {

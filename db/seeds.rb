@@ -7,14 +7,22 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Question.destroy_all
 Response.destroy_all
-User.destroy_all
+
 
 question = Question.create([
   {body: 'How are you feeling?', color: '#000'},
-  {body: 'What is your mood?', color: '#fff'}
+  {body: 'How did you sleep last night?', color: '#fff'},
+  {body: 'How much energy do you have?', color: '#'},
+  {body: 'Early mornings?', color: '#'},
+  {body: 'Late nights?', color: '#'},
+  {body: 'What is your mood?', color: '#'},
+  {body: 'What do you think about last year', color: '#'},
+  {body: 'How has your year been?', color: '#'},
+  {body: 'How has your month been?', color: '#'},
+  {body: 'Sleeping in?', color: '#'}
 ])
 
 response = Response.create([
-  {color: '#000'},
+  {color: '#fff'},
   {color: '#fff'}
 ])
