@@ -59,7 +59,6 @@ class QuestionsController < ApplicationController
   def update
     @question = Question.find(params[:id])
     if @question.update(question_params)
-      @question.destroy
       redirect_to @question
     else
       render 'edit'
