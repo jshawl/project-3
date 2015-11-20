@@ -1,23 +1,15 @@
 <h1>What color is...</h1>
 
-<div class="newQ">
+<div class="NewQ">
   <%= link_to 'New question', new_question_path %>
 </div>
 
-<table>
-  <tr>
-    <th>Question</th>
-    <th>Color</th>
-  </tr>
-</table>
   <% @questions.each do |question| %>
-    <div class="QandA">
 <table>
     <tr>
-      <td><%= question.body %></td>
+      <td><%= link_to question.body, question %></td>
       <td class="color-field" style="background-color: <%= question.color %>"></td>
-      <td><%= link_to 'Select', question_path(question) %></td>
-      <td><%= link_to 'Re-luminate', edit_question_path(question) %></td>
+      <td class="response-edit"><%= link_to 'Re-luminate', edit_question_path(question) %></td>
       <td><%= link_to 'De-luminate', question_path(question),
               method: :delete,
               data: { confirm: 'Feeling anti-chromatic?' } %></td>

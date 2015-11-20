@@ -36,16 +36,20 @@
  h1 {
  	font-size: 60px;
   background-color: #fff;
+  padding: 50px;
+  margin: auto;
  }
 
  h3 {
  	color: #95a5a6;
- 	font-weight: 400;
+  position: relative;
   float: right;
-  border-style: solid;
-  border-radius: 100px;
-  border-color: #000;
+  padding: inherit;
   margin: auto;
+  background-color: #333;
+  background-size: contain;
+  padding-bottom: 135px;
+  padding: inherit;
  }
 
  h4 {
@@ -54,12 +58,32 @@
  	font-size: 20px;
  }
 
-div{
+div a:link{
+  color: #fff;
+}
+
+  .NewQ {
+    background-color: #BA81C0;
+    text-align: center;
+    font-size: 35px;
+    color: #fff;
+  }
+
+table{
+  table-layout: auto;
+  column-span: all;
+  background-color: #3FBEA1;
+  border: 1px solid black;
 }
 
 td{
   table-layout: auto;
+  border: 1px solid black;
 }
+  .response-edit{
+   background-color: #3FBEA1
+  }
+
 
 tr{
   table-layout: auto;
@@ -90,9 +114,10 @@ tr{
  /* Links */
  a {
     font-size: 20px;
+    font-style: oblique;
      color: #fff;
-     background-color: #3498DB;
      word-wrap: break-word;
+     text-decoration: none;
 
      -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
      -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -117,10 +142,7 @@ tr{
      transition: color 0.1s ease-in, background 0.1s ease-in;
  }
 
-table{
-  table-layout: auto;
-  column-span: all;
-}
+
 
   hr {
      display: block;
