@@ -1,6 +1,5 @@
 class Response < ActiveRecord::Base
-  has_many :questions
-  has_many :users
+  belongs_to :questions
+  belongs_to :users
   has_many :colors
-
 end

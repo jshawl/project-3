@@ -17,7 +17,7 @@ class QuestionsController < ApplicationController
   end
 
   def index
-    authenticate_user!
+    # authenticate_user!
     # @last_viewed_question = Question.find(session[:last_viewed_question_id])
     @questions = Question.all.order(session[:sort_by])
       if current_user

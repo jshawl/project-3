@@ -18,21 +18,6 @@
 //= require_tree .
 
 $(document).ready(function(){
-  $('button').on('click',function(){
-    alert('I was clicked')
-
-  $('#set-color').click(color)
-  function color(evt){
-    colorSelect = $('#color-field').val();
-    console.log(colorSelect);
-    console.log('color select');
-    evt.preventDefault();
-    $("div.brush").css("background", colorSelect)
-
-    $('.square').mouseover(function(){
-  $(this).css("background", colorSelect)
-  })
-}
 
   $.minicolors = {
       defaults: {
@@ -48,13 +33,12 @@ $(document).ready(function(){
           hideSpeed: 100,
           inline: false,
           keywords: '',
-          letterCase: 'lowercase',
+          letterCase: 'uppercase',
           opacity: false,
           position: 'bottom left',
           show: null,
-          showSpeed: 100,
+          showSpeed: 50,
           theme: 'default'
+        }
       }
-  };
-})
-})
+    })

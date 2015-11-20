@@ -56,8 +56,11 @@
  }
 
 div{
-
 }
+  td{
+
+  }
+
   .color-field{
     position: relative;
     margin: 50 0 0 0px;
@@ -68,12 +71,14 @@ div{
     height: 100px;
     text-align: center;
   }
+
  /* Paragraph & Typographic */
  p {
      line-height: 28px;
      margin-bottom: 25px;
      font-size: 16px;
  }
+
 
  .centered {
      text-align: center;
@@ -110,7 +115,7 @@ div{
  }
 
 table{
-  background-color: yellow;
+  /*background-color: yellow;*/
 }
 
   hr {
