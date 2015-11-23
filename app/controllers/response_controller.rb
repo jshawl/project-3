@@ -1,4 +1,5 @@
 class ResponseController < ApplicationController
+  # typically this would be plural, ResponsesController
 
   def set_respone
     @response = Response.new
@@ -17,6 +18,7 @@ class ResponseController < ApplicationController
   def index
     # authenticate_user!
     # @last_viewed_question = Question.find(session[:last_viewed_question_id])
+    # remove commented out code
     @responses = Response.all.order(session[:sort_by])
       if current_user
         @responses = current_user.responses

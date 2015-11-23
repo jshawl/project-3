@@ -23,6 +23,6 @@ question = Question.create([
 ])
 
 response = Response.create([
-  {color: '#fff'},
-  {color: '#fff'}
+  {color: '#fff', question: question[0]},
+  {color: '#fff', question:question[1]}
 ])

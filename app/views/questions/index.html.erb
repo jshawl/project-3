@@ -6,10 +6,12 @@
 
   <% @questions.each do |question| %>
 <table>
+<!-- avoid using tables with no tabular data. Use divs / css instead to control layout -->
     <tr>
-      <td><%= link_to question.body, question %></td>
+      <td><%= link_to question.body, new_question_response_path(question) %></td>
       <td class="color-field" style="background-color: <%= question.color %>"></td>
       <td class="response-edit"><%= link_to 'Re-luminate', edit_question_path(question) %></td>
+      <!-- recommend more helpful terms for edit / delete for the user -->
       <td><%= link_to 'De-luminate', question_path(question),
               method: :delete,
               data: { confirm: 'Feeling anti-chromatic?' } %></td>

@@ -22,7 +22,8 @@ ActiveRecord::Schema.define(version: 20151118230814) do
     t.datetime "updated_at",  null: false
     t.integer  "user_id"
     t.integer  "response_id"
-    t.string   "color"
+    t.string   "color" #recommend removing this column and storing in responses table.
+    # currently any user can update any question - and that question will have the same response for all users
   end
 
   create_table "responses", force: :cascade do |t|

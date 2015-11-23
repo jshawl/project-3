@@ -41,7 +41,7 @@
  }
 
  h3 {
- 	color: #95a5a6;
+ 	color: #95a5a6; /* remember to indent code correctly */
   position: relative;
   float: right;
   padding: inherit;
@@ -124,6 +124,9 @@ tr{
      -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
      -o-transition: color 0.1s ease-in, background 0.1s ease-in;
      transition: color 0.1s ease-in, background 0.1s ease-in;
+     /* consider using something like autoprefixer - https://github.com/postcss/autoprefixer 
+      * to do this for you.
+      * */
  }
 
  a:hover,

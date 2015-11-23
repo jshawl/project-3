@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get '/questions/sort', to: 'questions#sort'
   get '/questions/delete_session', to: 'questions#delete_session'
   get 'response/index'
+  # consider using `member` to dry up your routes here
+  # http://guides.rubyonrails.org/routing.html#adding-member-routes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

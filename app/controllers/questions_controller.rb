@@ -22,7 +22,7 @@ class QuestionsController < ApplicationController
     @questions = Question.all.order(session[:sort_by])
       if current_user
         @questions = current_user.questions
-        @questions = Question.all
+        @questions = Question.all # remove this line
       else
         @questions = Question.all
       end
@@ -38,6 +38,7 @@ class QuestionsController < ApplicationController
 
   def create
     @question = current_user.questions.build(question_params)
+    # what is the difference between .build and .new and .create?
     if @question.save
       redirect_to @question
     else
@@ -68,6 +69,8 @@ class QuestionsController < ApplicationController
   def destroy
     @question = Question.find(params[:id])
     @question.destroy
+    # can you think of a way to restrict deletion to the user who created
+    # the question?
     redirect_to @question
   end
 
